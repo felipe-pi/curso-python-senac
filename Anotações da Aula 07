@@ -1,0 +1,22 @@
+
+sudo apt-get install git git-core // istalar o guithub no PC
+
+//nomeando paara o git quem é que esta comitando
+git config --global user.name "Felipe"
+git config --global user.email "felipe.pi@outlook.com"
+git config --list // verificando os itens acima
+
+gitlab / bitbucket
+
+na primeira vez digitamos git init, git remote
+depois gitadd
+...
+
+git add .//add todos os arquivos alterados
+
+brunch (ramo) master / dev / fix(cópia do master)
+
+git clone https://github.com/felipe-pi/hellogit.git
+clona um repositorio de outros
+
+
