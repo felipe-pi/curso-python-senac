@@ -16,6 +16,8 @@ git add .//add todos os arquivos alterados
 
 brunch (ramo) master / dev / fix(cópia do master)
 
+git 
+
 git clone https://github.com/felipe-pi/hellogit.git
 clona um repositorio de outros
 
