@@ -5,8 +5,8 @@ class Funcionario(Pessoa):
     def __init__(self, nome, matricula):
         pass
 
-    def __init__ super(Pessoa):
-        pass
+    # def __init__ super(Pessoa):
+    #     pass
 
     def trabalha():
         print("Funcionario trabalhando...")
