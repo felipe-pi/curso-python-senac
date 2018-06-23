@@ -1,0 +1,56 @@
+
+#elementary
+sudo rm -rf /var/lib/apt/lists/lock
+sudo apt-get install build-essential
+
+sudo apt-get install python3-dev python3-setuptools -y
+
+sudo dpkg -i pacote.deb (instalação de pacotes.deb)
+sudo apt-get -f install (erro de dependencia ao instalar programa)
+
+eddy na loja de app do elementary
+
+#distribuição Linux
+
+.deb (igual ao .exe) - debian like
+.rpm red kat linke
+.tgz (tipo zip) 
+./configure make - sudo make install
+
+devops / Configuração multipla (sugestão do André)
+
+ANSIBLE
+PUPET
+FABRIC
+CHEF
+
+DBeaver - SGDB 
+
+# foi instalado o git novamente $sudo apt-get install git git-core
+
+extensão no VScode 
+    - Atom(teclas de atalho)
+    - Python
+    - Djaneiro (extensão de Django)
+    - HTML Snippets
+    - Git Blame
+    - Bootstrap 3 Snippets
+
+# foi configurado o git
+
+aluno@aluno-pc:~$ git config --global user.name "Felipe Ramos"
+aluno@aluno-pc:~$ git config --global user.email "felipe.pi@outlook.com"
+
+aluno@aluno-pc:~$ mkdir workspace #mkdir para criar as pastas de tabalho
+aluno@aluno-pc:~$ cd workspace
+aluno@aluno-pc:~/workspace$ mkdir poo
+aluno@aluno-pc:~/workspace$ cd poo
+aluno@aluno-pc:~/workspace/poo$ 
+
+Design Patterns ligado ao POO
+
+#Nome das classes em Letra maiúscula nomes compostos de métodos separados por "_"
+
+Exercício
+
+Criar classe para validação de idade.
