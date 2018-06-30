@@ -1,0 +1,87 @@
+#instalar as dependências do python
+
+$sudo apt install python3-dev python3-setuptools python3-pip
+
+#instalação do pipenv
+#pipenv é uma gerenciador de ambientes virtuais uma espécie de gerenciador de versão com
+#que o python "conversa"
+#pyview (nativa do python), virtualenv, virtualenvwrapper, pipenv
+
+$sudo pip3 install pipenv 
+
+#criamos o diretorio /pipenv - (mkdir)
+
+#dentro dele criamos um ambiente virtual 
+
+$pipenv --python 3.5
+
+#arquivo pipfile contem todas as informações sobre as dependencias do que vai ser instalada
+#dos demais prorgamas do ambiente virtual
+
+#instalando o Django
+$pip install Django
+
+#ativa o shell do pipenv
+$pipenv shell
+$pipenv run python #alternativa
+
+$nano ~/.bashrc # para abrir o editor de texto o "til" é o path do usuário logado o "." é #um arquivo oculto
+
+#instalando o virtualenvwrapper
+
+$sudo pip3 install virtualenvwrapper
+
+$nano ~/.bashrc 
+# para abrir o editor de texto o "til" é o path do usuário logado o "." é 
+#um arquivo oculto
+
+export WORKON_HOME=~/venvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+
+#criar diretorio e o ambiente
+$mkvirtualenv wrapper_test
+
+#para sair do ambiente virtual
+$deactivate
+
+#entrar no ambiente
+$workon wrapper_test
+
+#pip freeze diz quais dependencias instaladas
+#pip freeze > cria o arqui requirements.txt
+$pip freeze
+$pip freeze >
+
+# para instalação outros usuários devem fazer
+$ pip install -r requirements.txt
+
+#no pipenv
+
+$pipenv install bpython --dev #só é intalado no ambiente de desenvolvimento
+
+#criarndo o diretorio do projeto
+
+$mkdir bugflow
+
+#instalamos o python e o django
+
+$pip install django
+$pip install python3
+
+#criando o projeto Django
+
+$pipenv run dejango-admin startproject bugflow .
+
+#esse "." no momento da ciração ele exclui a criação de um diretório a mais
+
+$pipenv run ./manage.py runserver
+$pipenv run ./manage.py runserver 0:8000//levanta o servidor de qualquer máquina
+
+#No arquivo settings.py esse asterisco qualquer um pode acessar 
+
+ALLOWED_HOSTS = [*]
+
+
+
+
