@@ -82,6 +82,8 @@ $pipenv run ./manage.py runserver 0:8000//levanta o servidor de qualquer máquina
 
 ALLOWED_HOSTS = [*]
 
+# se o importe for de um diretório é obrigatório ter o arquivo __init__ vazio nesse #diretório
+
 
 
 
