@@ -1,0 +1,84 @@
+#framework java uraptor, play, JSF, STRUCTS, JBOSS
+
+@passos de setup do André para cada novo projeto
+# setup
+# 1 - pipenv --puthon (Alternativa)
+# 2 - pipenv istall django
+# 3 - instala decouple
+# 4 - diretorios
+
+#para utilizar comandos python dentro do ambiente pipenv usa-se 'pipenv run'
+#usa-se um ponto no final do comando abaixo para eliminar um nível diretório com mesmo nome
+#esse ponto é um caractre conringa do linux e não do django
+
+$pipenv run django-admin sartproject bugflow2 .
+
+#para abrir o projeto criado acima no VSCode bas ta ir em File>OpenFolder>escolha o #diretório
+
+#teste do webserver
+
+$pipenv run ./manege.py runserver
+
+# drwx -> no terminal quer dizer 'diretorio' 'read' 'write' 'executable' 
+# dividio em grupos rwx (usuário) rwx(grupo) rwx(publico)
+#'./' é para executar um executável no linux.
+# comando linux $chmod a+x arquivo altera os atributos do arquivo (no caso executable)
+# o comando seria $pipenv run python3 manage.py runserver
+#substituimos o python3 por './'
+
+# __init__ é um arquivo vazio para o interpretador python e é obrigatório em todos os projetos
+#settings é do django
+#url.py são os caminhos, elas apontam para os recursos
+#wsgi integranção entre o django e o webserver
+#webserver
+#Apache, ngniy, gunicorn.
+
+#cria uma home 
+#criando uma aplicação
+
+$ pipenv run ../manage.py startapp home
+
+#editanto o arquivo settings
+# no container  INSTALLED_APPS que por padrão tem os app default d django
+DJANGO_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    
+]
+
+THIRD_APPS = []
+
+PROJECT_APPS = [
+    'bugflow.home.apps.HomeConfig',
+]
+
+# criamos o uma lista concatenandos 
+# no arquivo migration alteramos o arquivo apps.py colocando o atributo nome ='bugflow.home'
+# alteramos o arquivo views.py
+#arquitetura MVC no Django é o MTV - Model View Tamplete
+#alteramos os aquivo apps.py
+
+from django.apps import AppConfig
+
+
+class HomeConfig(AppConfig):
+    name = 'bugflow.home'
+
+
+# alterando o arquivo views:
+
+from django.shortcuts import render #vem por default
+from django.http import HttpResponse #importamos
+
+# Create your views here.
+
+def home_page(request):
+    return HttpResponse('<h1>Olá Mundo</h1>')
+
+# no modulo URL direcionamos
+
+
