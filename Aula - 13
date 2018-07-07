@@ -101,6 +101,25 @@ postgres=# create role bugflow_user with login password 'password123';
 
 postgres=# create database bugflow_db owner bugflow_user;
 
+#saindo do postegres
+postgres=# \q
+
+#instalando um mediado entre o python e o postgres
+$ pipenv install psycopg2-binary
+
+#modificar no settins os Databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'bugflow_db',
+        'USER': 'bugflow_user',
+        'PASSWORD': 'password123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        ),
+    }
+}
 
 
 
