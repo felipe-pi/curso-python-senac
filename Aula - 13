@@ -122,6 +122,11 @@ DATABASES = {
 }
 
 
+#criação das tabelas no postgre
+
+$pipenv run ./migrate.py migrate
+
+
 
 
 
