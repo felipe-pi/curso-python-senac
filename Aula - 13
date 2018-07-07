@@ -81,4 +81,8 @@ def home_page(request):
 
 # no modulo URL direcionamos
 
+#instalando o postgresql
+
+$ sudo apt install postgresql postgresql-contrib
+
 
