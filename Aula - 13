@@ -85,4 +85,25 @@ def home_page(request):
 
 $ sudo apt install postgresql postgresql-contrib
 
+# acessando postegres
+
+$ sudo supostgres
+
+#depois 
+
+$psql
+
+#criando usuarios do banco
+
+postgres=# create role bugflow_user with login password 'password123';
+
+#criando o banco e definino o gerente do banco
+
+postgres=# create database bugflow_db owner bugflow_user;
+
+
+
+
+
+
 
